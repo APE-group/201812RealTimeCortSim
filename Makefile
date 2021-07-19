@@ -15,7 +15,7 @@ GCC	 =	g++
 # 1 homogeneous connectivity,
 # 2 homogeneous conn, but local inhibition
 # 3 ...
-CXXLIFCAFLAGS = -g -O3 -Wall -fno-omit-frame-pointer \
+CXXLIFCAFLAGS = -g -O3 -Wall -fno-omit-frame-pointer -fno-PIC \
 	-D miniLocN=32000 \
 	-D makeMaxGlobH=256 \
 	-D makeStencil_Max=96 \
@@ -26,7 +26,7 @@ CXXLIFCAFLAGS = -g -O3 -Wall -fno-omit-frame-pointer \
 	-D makeMaxCMFract=1 \
 	-D LIFCAneuron \
 	-D makeInsertBarrierBeforeSendRec \
-	-mcmodel=medium
+	-mcmodel=large
 #	-D makeOverallTopology=1 \
 #	-D makeMaxHomogeneousSide=8 \
 #	-D stencilDim=8 \
